@@ -61,6 +61,7 @@ public class MyDBHandler extends SQLiteOpenHelper{
                 dbString += "\n";
                 dbString += c.getString(c.getColumnIndex("name"));
             }
+            c.moveToNext();
         }
         db.close();
         return dbString;

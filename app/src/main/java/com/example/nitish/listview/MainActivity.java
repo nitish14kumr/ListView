@@ -15,7 +15,6 @@ import static android.widget.Toast.LENGTH_SHORT;
 
 public class MainActivity extends AppCompatActivity {
 
-    String people = "Abhishek \n Akhil \n Akshay";
     EditText input;
     MyDBHandler dbHandler;
     ListAdapter listAdapter;
@@ -29,9 +28,6 @@ public class MainActivity extends AppCompatActivity {
         input = (EditText) findViewById(R.id.input);
         dbHandler = new MyDBHandler(this,null,null,1);
         listView = (ListView) findViewById(R.id.listView);
-//        listAdapter = new CustomAdapter(this, people);
-//        listView.setAdapter(listAdapter);
-
         printDB();
         listView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener() {
@@ -57,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void printDB(){
-        String array = people + dbHandler.dbtoString();
+        String array = dbHandler.dbtoString();
         String[] dbString = array.split("\n");
         listAdapter = new CustomAdapter(this, dbString);
         listView.setAdapter(listAdapter);
