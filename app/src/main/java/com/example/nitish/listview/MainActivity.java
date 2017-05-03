@@ -15,7 +15,7 @@ import static android.widget.Toast.LENGTH_SHORT;
 
 public class MainActivity extends AppCompatActivity {
 
-    String people = "Abhishek \n Akhil \n Akshay \n";
+    String people = "Abhishek \n Akhil \n Akshay";
     EditText input;
     MyDBHandler dbHandler;
     ListAdapter listAdapter;
