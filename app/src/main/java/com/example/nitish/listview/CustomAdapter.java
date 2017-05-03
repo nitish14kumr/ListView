@@ -1,6 +1,5 @@
 package com.example.nitish.listview;
 
-
 import android.content.Context;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
@@ -25,10 +24,7 @@ public class CustomAdapter extends ArrayAdapter<String>{
 
         String value = getItem(position);
         TextView text = (TextView) view.findViewById(R.id.text);
-     //   ImageView image = (ImageView) view.findViewById(R.id.image);
         text.setText(value);
-     //   image.setImageResource(R.mipmap.ic_launcher);
-
         return view;
     }
 }
